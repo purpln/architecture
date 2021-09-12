@@ -1,5 +1,3 @@
-#if APP_ARCHITECTURE
-
 import UIKit
 
 public typealias View = UIView & ViewProtocol & ViewRouter
@@ -42,4 +40,4 @@ extension ViewProtocol where Self: View {
     }
 }
 
-#endif
+

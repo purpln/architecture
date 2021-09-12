@@ -1,5 +1,3 @@
-#if APP_ARCHITECTURE
-
 import UIKit
 
 public typealias Navigation = NavigationController
@@ -50,4 +48,4 @@ public class NavigationController: UINavigationController {
     required public init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 }
 
-#endif
+

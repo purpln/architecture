@@ -1,5 +1,3 @@
-#if APP_ARCHITECTURE
-
 import UIKit
 
 public class ViewController: UIViewController {
@@ -63,4 +61,4 @@ extension UIStatusBarStyle {
     static var light: UIStatusBarStyle { if #available(iOS 13.0, *) { return .darkContent } else { return .lightContent } }
 }
 
-#endif
+

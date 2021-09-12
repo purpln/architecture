@@ -1,5 +1,3 @@
-#if APP_ARCHITECTURE
-
 import UIKit
 
 /**
@@ -60,4 +58,4 @@ extension NavigationBar {
     }
 }
 
-#endif
+

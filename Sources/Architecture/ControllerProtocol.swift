@@ -1,5 +1,3 @@
-#if APP_ARCHITECTURE
-
 import UIKit
 
 public typealias Controller = UIViewController & ControllerProtocol & ControllerViewing
@@ -67,6 +65,7 @@ extension ControllerViewing where Self: ControllerProtocol {
                 protocolView = view.createView(router)
             }
         #endif
+        
         view = protocolView ?? view
         configure()
         return self
@@ -78,4 +77,4 @@ extension ControllerViewing where Self: ControllerProtocol {
     }
 }
 
-#endif
+
