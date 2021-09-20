@@ -30,7 +30,7 @@ public protocol AnyViewProtocol {
     static func createView(_ router: RouterProtocol) -> UIView?
 }
 
-extension ViewProtocol where Self: View {
+extension ViewProtocol where Self: ViewRouter {
     public static func createView(_ router: RouterProtocol) -> UIView? {
         guard let router = router as? Router else { return nil }
         var view = Self(frame: .zero)
