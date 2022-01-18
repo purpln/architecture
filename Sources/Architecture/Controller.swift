@@ -6,20 +6,12 @@ public protocol ControllerProtocol: UIViewController {
     @discardableResult
     func initialize() -> Self
     func configure()
-    func open()
-    func close()
-    func rotate()
-    func resize()
 }
 
 extension ControllerProtocol {
     @discardableResult
     public func initialize() -> Self { return self }
     public func configure() { }
-    public func open() { }
-    public func close() { }
-    public func rotate() { }
-    public func resize() { }
     
     public var navigation: NavigationController? {
         guard let navigation = navigationController as? NavigationController else { return nil }

@@ -10,18 +10,11 @@ public protocol ViewRouter {
 public protocol ViewProtocol: UIView, AnyViewProtocol {
     func configure()
     func load()
-    
-    func rotate()
-    func resize()
 }
 
 extension ViewProtocol {
-    //public var view: UIView { self }
     public func configure() { }
     public func load() { }
-    
-    public func rotate() { }
-    public func resize() { }
     
     public static func createView(_ router: RouterProtocol) -> UIView? { nil }
 }

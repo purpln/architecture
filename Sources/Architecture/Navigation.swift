@@ -8,11 +8,6 @@ public class NavigationController: UINavigationController {
         return bar
     }
     
-    public var controller: ViewController? {
-        guard let controller = visibleViewController as? ViewController else { return nil }
-        return controller
-    }
-    
     @discardableResult public
     func hidden(_ bool: Bool) -> Self {
         setNavigationBarHidden(bool, animated: true)

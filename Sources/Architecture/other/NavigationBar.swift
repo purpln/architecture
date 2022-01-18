@@ -7,6 +7,7 @@ public class NavigationBar: UINavigationBar {
     var background: UIColor? = nil { didSet { configure() } }
     var color: UIColor? = nil { didSet { configure() } }
     var view = UIView()
+    var atributes: [NSAttributedString.Key: Any] = [:]
     
     func configure() {
         for subview in subviews {
@@ -36,8 +37,8 @@ extension NavigationBar {
     @discardableResult public
     func color(_ color: UIColor?) -> Self {
         self.color = color
-        guard let color = color else { return self }
-        titleTextAttributes = [.foregroundColor: color]
+        atributes[.foregroundColor] = color
+        titleTextAttributes = atributes
         return self
     }
     @discardableResult public
@@ -47,13 +48,8 @@ extension NavigationBar {
     }
     @discardableResult public
     func font(_ font: UIFont?) -> Self {
-        guard let font = font else { return self }
-        titleTextAttributes = [.font: font]
-        return self
-    }
-    @discardableResult public
-    func large(_ bool: Bool) -> Self {
-        if #available(iOS 11.0, *) { prefersLargeTitles = bool }
+        atributes[.font] = font
+        titleTextAttributes = atributes
         return self
     }
 }
